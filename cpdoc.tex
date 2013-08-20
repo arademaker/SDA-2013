@@ -33,6 +33,19 @@
 % indexing of your information. The data model vary according to the
 % specific content of that they hold.
 
+% Figure~\ref{fig:cpdoc-today} presents the CPDOC current
+% architecture. The archives are maintained in three different
+% information systems (the users interface of all of them are web-based)
+% that share a common relational database. CPDOC's web portal provides a
+% unify query interface for the archives metadata and low resolution of
+% digital files. Each of the systems has independent management and
+% adopts idiosyncratic criteria concerning the organization and indexing
+% of the information, which vary depending on the specifications of the
+% content they host: personal archives documents, oral history
+% interviews and the Brazilian Historical -- Biographic Dictionary
+% entries. CPDOC's web portal provides a unifying query interface. In
+% the following subsections we briefly describe the systems.
+
 Figure~\ref{fig:cpdoc-today} presents the CPDOC current
 architecture. The archives are maintained in three different
 information systems that share a common relational database. 
@@ -140,7 +153,14 @@ ensure the accuracy of the information and style criteria.
 The dictionary's database stores few metadata concerning each entry,
 and the query is limited to keywords search within the title or text.
 
+% \subsection{CPDOC portal and public access interface}
 
+% The three systems presented above share a common relational
+% database. The implementation was conceived so as to facilitate the
+% construction of a single query interface over all CPDOC archives in
+% the CPDOC's web portal. In CPDOC's web portal users are required to
+% login in order to access data, and the query interface available in
+% there is the only means for reach that.
 
 %%% Local Variables: 
 %%% mode: latex

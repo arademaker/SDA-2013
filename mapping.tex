@@ -31,10 +31,11 @@ relationships and properties associated with Wikipedia resources, and
 users can link other datasets to the DBpedia dataset in order to
 create a big and linked knowledge knowledge base.
 % The DBpedia project, for instance, provide URIs~\footnote{Uniform
-%   resource identifier,
-%   \url{https://en.wikipedia.org/wiki/Uniform_resource_identifier}.}
-% which enable the connection of these resources with different sources
-% of data in order to create a big and linked knowledge database.
+% resource identifier,
+% \url{https://en.wikipedia.org/wiki/Uniform_resource_identifier}.}
+% which enable the connection of these resources with different
+% sources of data in order to create a big and linked knowledge
+% database.
 CPDOC can use DBpedia to link their data to already available
 resources in DBpedia making their own data available to a bigger
 audience.
@@ -57,21 +58,47 @@ WordNet. All of these lexical resources and ontologies will be further
 explored when we start the natural language processing of DHBB
 entries.
 
-%Much of the effort proposed is related to integrating the data
-%available to other sources of knowledge, improving both accessibility
-%and usability of the data CPDOC holds. To do so, it is imperative to
-%migrate the current CPDOC database model to a open, shared and modern
-%one, aligned with semantic web directives, ontologies and
-%vocabularies. This improvement is highlighted is what we called the
-%refinement of the RDF model when we described Figure~\ref{fig:dia-1}.
-%It what follows, let us give an example of the proposal refinement
-%considering a fragment of the original CPDOC relational model.
+% Much of the effort proposed is related to integrating the data
+% available to other sources of knowledge, improving both
+% accessibility and usability of the data CPDOC holds. To do so, it is
+% imperative to migrate the current CPDOC database model to a open,
+% shared and modern one, aligned with semantic web directives,
+% ontologies and vocabularies. This improvement is highlighted is what
+% we called the refinement of the RDF model when we described
+% Figure~\ref{fig:dia-1}.  It what follows, let us give an example of
+% the proposal refinement considering a fragment of the original CPDOC
+% relational model.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=.8\textwidth]{pho.png}
   \caption{PHO first RDF model}\label{fig:pho}
 \end{figure}
+
+% What is important to note in the model presented in
+% Figure~\ref{fig:pho} is that besides simple translations from
+% relational to graph model, D2RQ was not able to automatic improve
+% much further the model. Let us highlight some cases. D2RQ was able
+% to correctly translate relations N:M in the relational model, such
+% as \texttt{entrevista\_entrevistador} (originally a table in the
+% relational model) to a property that connect directly instances of
+% \texttt{entrevista} (Interview) with instances of
+% \texttt{entrevistador} (Interviewer). Nevertheless, the N:M relation
+% between \texttt{entrevista} and \texttt{tecnico} (technician) was
+% kept as a a intermediary class called \texttt{tecnico\_entrevista}
+% because of the existence of an aditional information in this N:M
+% relation, the role (\texttt{funcao} class) of the technician in the
+% interview. More on roles, the relational model also expose some
+% inconsistences. Althought connection of the technician and the
+% interview is parameterize by its role, the donator, interviewer and
+% the interviewee of the interview are modelled each one by a specific
+% table. The main problem with this model is that interviewee,
+% interviewer, donator and technician are all people with share a lot
+% of common properties like name, address and so on. These problems
+% are all result of a ``ad hoc'' modeling process. The model, as is,
+% only makes sense for CPDDOC team and it could hardly be useful
+% outside CPDOC.
+
 
 Figure~\ref{fig:pho} shows a fragment of the current RDF model
 produced by D2RQ, in step (1) of Figure~\ref{fig:dia-1}, using the
