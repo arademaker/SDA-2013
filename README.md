@@ -1,10 +1,5 @@
 
-# Article SDA 2013
-
-Dois branches:
-
-- versao submetida
-- versao estendida
+# Article SDA 2013 (techreport version)
 
 ## geral
 
