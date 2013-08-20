@@ -1,32 +1,5 @@
-\documentclass{llncs}
 
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{listings}
-
-\begin{document}
-
-\title{A linked open data architecture for contemporary historical archives}  
-\author{Alexandre Rademaker\inst{1} 
-  \and Suemi Higuchi\inst{2}
-  \and D\'ario Augusto Borges Oliveira\inst{2}}
-\institute{IBM Research and FGV/EMAp \and FGV/CPDOC}
-\maketitle
-
-\begin{abstract}
-  This paper presents an architecture for historical archives
-  maintenance based on Open Linked Data technologies and open source
-  distributed development model and tools. The proposed architecture
-  is being implemented for the archives of the Center for Teaching and
-  Research in the Social Sciences and Contemporary History of Brazil
-  (CPDOC) from Getulio Vargas Foundation (FGV).
-\end{abstract}
-
-\input{introduction}
-\input{cpdoc}
-\input{problems}
-\input{proposal}
-\input{mapping}
+\section{Conclusion}
 
 % The new database system composed by Markdown files and periodic RDF
 % releases can be easily used for accessing data in an efficient
@@ -41,8 +14,6 @@
 % Solr) to easy the access of data stored. This schema follows a modern,
 % open and scalable way of sharing and improving the data stored in
 % CPDOC.
-
-\section{Conclusion}
 
 In this paper we presented a new architecture for CPDOC archives
 creation and maintenance. The architecture targeted is based on open
@@ -96,9 +67,7 @@ Section~\ref{sec:mapping} can also be defined following ideas of
 \cite{onto-context}. Due the lack of space, we did not present in this
 paper.
 
-\bibliographystyle{plain}
-\bibliography{sda}
-
-\end{document}
-
-
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "article"
+%%% End: 
