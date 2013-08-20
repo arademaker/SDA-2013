@@ -1,0 +1,104 @@
+\documentclass{llncs}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\begin{document}
+
+\title{A linked open data architecture for contemporary historical archives}  
+\author{Alexandre Rademaker\inst{1} 
+  \and Suemi Higuchi\inst{2}
+  \and D\'ario Augusto Borges Oliveira\inst{2}}
+\institute{IBM Research and FGV/EMAp \and FGV/CPDOC}
+\maketitle
+
+\begin{abstract}
+  This paper presents an architecture for historical archives
+  maintenance based on Open Linked Data technologies and open source
+  distributed development model and tools. The proposed architecture
+  is being implemented for the archives of the Center for Teaching and
+  Research in the Social Sciences and Contemporary History of Brazil
+  (CPDOC) from Getulio Vargas Foundation (FGV).
+\end{abstract}
+
+\input{introduction}
+\input{cpdoc}
+\input{problems}
+\input{proposal}
+\input{mapping}
+
+% The new database system composed by Markdown files and periodic RDF
+% releases can be easily used for accessing data in an efficient
+% way. The figure below illustrates the process. CPDOC and their
+% collaborators would be responsible for creating Markdown files that
+% would be automatically analyzed by a script for generating the RDF
+% file, which would be refined and improved. This refined RDF would be
+% made available to the web as linked open data, which would allow the
+% information to be accessed and improved by the community. On the other
+% hand, the RDF would also be stored in a triple store that allows for
+% queries using many different GUI configurations (for instance using
+% Solr) to easy the access of data stored. This schema follows a modern,
+% open and scalable way of sharing and improving the data stored in
+% CPDOC.
+
+\section{Conclusion}
+
+In this paper we presented a new architecture for CPDOC archives
+creation and maintenance. The architecture targeted is based on open
+linked data concepts and open source methodologies and tools. We
+believe that despite the fact that CPDOC users would need to be
+trained to use the proposed tools such as text editors, version
+control softwares and command line scripts; this architecture would
+give more control and easiness for data maintenance. Moreover, the
+architecture allows knowledge to be easily incorporated to collections
+data without the dependency of database refactoring. This means that
+CPDOC team will be much less dependent from FGV's Information
+Management and Software Development Staff.
+
+% NÃO SEI SE VALE A PENA FLOREAR A CONCLUSÃO. CORTE, SE ESTIVER
+% DEMAIS!  Por fim, entendemos que as possibilidades abertas nesse
+% cenário transcendem em muito os limites do mundo digital e
+% repercutem diretamente na nossa própria história em construção, na
+% maneira como queremos colaborar para a mediação do saber. O ato de
+% conhecer não se reduz a uma apreensão inerte de dados, ou tão
+% somente advém de apreciações meramente lógicas. As pessoas conjugam
+% faculdades cognitivas e perceptivas quando interagem entre si e com
+% os recursos que as cercam, participando da construção do
+% conhecimento sobre a realidade. O ambiente digital e de rede traz
+% infinitas oportunidades de compartilhamento dessa história em
+% construção, com desdobramentos na cultura e no aprendizado. Mas para
+% que esse ambiente seja efetivamente transformador, é fundamental o
+% papel das políticas de difusão e disponibilização dos registros
+% históricos, bem como a busca pela sua melhor forma de acesso,
+% garantindo a diversidade da qual não podem prescindir.
+
+%Finally, we believe that the possibilities offered by our proposed
+%architecture far transcend the limits of the digital world and
+%directly affect our own \textit{history in the making}, the way we
+%collaborate for the mediation of knowledge. The act of knowing is not
+%reduced to an inert seizure of data, nor it comes from assessments
+%merely logical. People combine cognitive and perceptual faculties as
+%they interact with the resources that surround them, participating in
+%the construction of the knowledge over the reality. The digital
+%environment and network brings endless opportunities for sharing this
+%history in the making, with developments in culture and learning. But
+%for this environment to be effectively transformer, is crucial the
+%role of policy dissemination and availability of historical records,
+%as well as the search for the right way to access it, ensuring the
+%diversity which can not do without.
+
+Many proposals of research concerning the use of lexical resources for
+reasoning in Portuguese using the data available in CPDOC are being
+carried out so as to improve the structure and quality of the DHBB
+entries. Moreover, the automatic extension of the mapping proposed in
+Section~\ref{sec:mapping} can also be defined following ideas of
+\cite{onto-context}. Due the lack of space, we did not present in this
+paper.
+
+\bibliographystyle{plain}
+\bibliography{sda}
+
+\end{document}
+
+

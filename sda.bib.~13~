@@ -1,0 +1,390 @@
+
+@inproceedings{deswarte2005,
+  title={Creating a history ontology: The challenges and criteria of building a humanities ontology},
+  author={Deswarte, R. and Oosthoek, J.},
+  booktitle={Conference National Centre for e-Social Science - NCeSS},
+  year={2005},
+}
+
+@book{allemang2008,
+ author = {Dean Allemang and James Hendler},
+ year = {2008},
+ title = {Semantic Web for the Working Ontologist: effective modeling in RDFs and OWL},
+ publisher = {Morgan Kauffman Publisher}
+}
+
+
+@article{Schlieder2010,
+  title={Digital heritage: Semantic challenges of long-term preservation},
+  author={Christoph Schlieder},
+  journal={Semantic Web},
+ pages = {143--147},
+ numpages = {12},
+ url = {http://iospress.metapress.com/content/A133576936H372UK},
+ doi = {10.3233/SW-2010-0013},
+  year={2010},
+  publisher={IOS Press}
+}
+
+@article{paula,
+  title={A participa\c{c}\~{a}o das mulheres na pol\'{i}tica brasileira},
+  author={Christiane Jalles de Paula},
+  journal={O Globo},
+  day={14},
+  month={set},
+  year={2010},
+  publisher={MPublishing, University of Michigan Library}
+}
+
+@book{santos,
+ author = {Fabiano Guilherme Santos},
+ year = {2003},
+ title = {O Poder Legislativo no Presidencialismo de Coaliz\~{a}o.},
+ publisher = {Editora UFMG - IUPERJ},
+ volume = {1}
+}
+
+
+@book{dhbb,
+ author = {Alzira Alves Abreu and Fernando Lattman-Weltman and Christiane Jalles de Paula},
+ year = {2010},
+ month = {February},
+ title = {Dicion\'{a}rio Hist\'{o}rico-Biogr\'{a}fico Brasileiro p\'{o}s-1930},
+ publisher = {CPDOC/FGV},
+ edition = {3}
+}
+
+
+@book{think-tank,
+ author = {McGann, James},
+ year = {2009},
+ month = {February},
+ title = {The Think Tank Index},
+ publisher = {Foreign Policy}
+}
+
+@article{bergman2001white,
+  title={White paper: the deep web: surfacing hidden value},
+  author={Bergman, Michael K},
+  journal={journal of electronic publishing},
+  volume={7},
+  number={1},
+  year={2001},
+  publisher={MPublishing, University of Michigan Library}
+}
+
+@Unpublished{3-law,
+  title = 	 {The three law of open government data},
+  author = 	 {David Eaves},
+  OPTkey = 	 {},
+  OPTmonth = 	 {},
+  OPTyear = 	 {},
+  note =	 {\url{http://eaves.ca/2009/09/30/three-law-of-open-government-data/}}
+}
+
+@book{rdf-primer,
+    day = {10},
+    editor = {Manola, Frank and Miller, Eric},
+    institution = {W3C},
+    keywords = {dt, dt-n7, rdf, w3c},
+    month = feb,
+    priority = {2},
+    publisher = {World Wide Web Consortium},
+    series = {W3C Recommendation},
+    title = {{RDF Primer}},
+    url = {http://www.w3.org/TR/rdf-primer/},
+    year = {2004}
+}
+
+@incollection{conniff,
+  author      = "Michael Conniff",
+  title       = "O DHBB e os brasilianistas",
+  editor      = "Editora FGV",
+  booktitle   = "CPDOC 30 Anos",
+  publisher   = "Editora FGV/CPDOC",
+  address     = "Rio de Janeiro",
+  year        = 2003,
+}
+
+@book{pierre2010cibercultura,
+  title={Cibercultura},
+  author={Pierre L{\'e}vy},
+  isbn={9788573261264},
+  series={Cole{\c{c}}{\~a}o Trans},
+  url={http://books.google.com.br/books?id=7L29Np0d2YcC},
+  year={2010},
+  publisher={EDITORA 34}
+}
+
+
+@book{owl,
+   title = {OWL 2 Web Ontology Language Document Overview},
+   edition = {2},
+   editor = {W3C OWL Working Group}, 
+   publisher = {World Wide Web Consortium},
+   series = {W3C Recommendation},
+   institution = {W3C},
+   year = {2012},
+}
+
+@inproceedings{d2rq,
+  title={{D2R} server-publishing relational databases on the semantic web},
+  author={Bizer, Christian and Cyganiak, Richard},
+  booktitle={5th international Semantic Web conference},
+  pages={26},
+  year={2006},
+  note = {\url{http://d2rq.org}},
+}
+
+@unpublished{d2rq-map,
+  note = {\url{http://d2rq.org/d2rq-language}},
+  title = {The {D2RQ} Mapping Language},
+  author = {Richard Cyganiak and Chris Bizer and Jorg Garbers and Oliver Maresch and Christian Becker}
+}
+
+@unpublished{r2rml,
+  title = {R2RML: RDB to RDF Mapping Language},
+  author = {Souripriya Das and Seema Sundara and Richard Cyganiak},
+  year = {2012},
+  note = {\url{http://www.w3.org/TR/r2rml/}}
+}
+
+@Unpublished{markdown,
+  author = 	 {John Gruber},
+  title = 	 {Markdown language},
+  OPTkey = 	 {},
+  OPTmonth = 	 {},
+  OPTyear = 	 {2004},
+  note =	 {\url{http://daringfireball.net/projects/markdown/}}
+}
+
+@unpublished{yaml,
+ title = {YAML: YAML Ain't Markup Language},
+ author = {Oren Ben-Kiki and Clark Evans and Ingy dot Net},
+ note = {\url{http://www.yaml.org/spec/1.2/spec.html}}
+}
+
+@unpublished{xhtml,
+  title={XHTML 1.0 the extensible hypertext markup language},
+  author={Pemberton, Steven and others},
+  journal={W3C Recommendations},
+  year={2000},
+  publisher={W3C}, 
+  note = {\url{http://www.w3.org/TR/xhtml1/}},
+}
+
+
+@unpublished{foaf,
+  title = {FOAF Vocabulary Specification},
+  author = {Dan Brickley and Libby Miller}, 
+  year = {2010},
+  note = {\url{http://xmlns.com/foaf/spec/}}
+}
+
+@unpublished{dc,
+  title =  {Dublin Core Metadata Element Set},
+  author = {Dublin Core Initiative},
+  note = {\url{http://dublincore.org/documents/dces/}},
+  year = {2012},
+}
+
+@unpublished{tei,
+  title =  {Text Encoding Initiative Guidelines},
+  author = {Text Encoding Initiative},
+  note = {\url{http://www.tei-c.org/Guidelines/}},
+  year = {2007}
+}
+
+@unpublished{gasp,
+  title =  {Governo Aberto SP},
+  author = {Governo do Estado de S\~{a}o Paulo},
+  note = {\url{http://www.governoaberto.sp.gov.br}},
+  year = {2013}
+}
+
+@unpublished{lexml,
+  title =  {Rede de Informa\c{c}\~{a}o Informativa e Jur\'{i}dica},
+  author = {LexML},
+  note = {\url{http://www.lexml.gov.br}},
+  year = {2013}
+}
+
+@unpublished{eaves,
+  title =  {The three laws of open government},
+  author = {David Eaves},
+  note = {\url{http://eaves.ca}},
+  year = {2010}
+}
+
+@article{dbpedia,
+ author = {Bizer, Christian and Lehmann, Jens and Kobilarov, Georgi and Auer, S\"{o}ren and Becker, 
+           Christian and Cyganiak, Richard and Hellmann, Sebastian},
+ title = {DBpedia - A crystallization point for the Web of Data},
+ journal = {Web Semantics},
+ issue_date = {September, 2009},
+ volume = {7},
+ number = {3},
+ year = {2009},
+ issn = {1570-8268},
+ pages = {154--165},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1016/j.websem.2009.07.002},
+ doi = {10.1016/j.websem.2009.07.002},
+ acmid = {1640848},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ keywords = {Knowledge extraction, Linked Data, RDF, Web of Data, Wikipedia}
+} 
+
+@unpublished{odi,
+  title =  {Open Data Initiative},
+  author = {Open Data Initiative},
+  note = {\url{http://www.opendatainitiative.org}},
+  year = {2013}
+}
+
+@article{ead,
+  author = {Daniel Pitti},
+  biburl = {http://www.bibsonomy.org/bibtex/2bec1c6f0d2d3b0249d5db148832548a1/dblp},
+  ee = {http://dx.doi.org/10.1045/november99-pitti},
+  journal = {D-Lib Magazine},
+  keywords = {dblp},
+  number = 11,
+  title = {Encoded Archival Description: An Introduction and Overview.},
+  url = {http://dblp.uni-trier.de/db/journals/dlib/dlib5.html#Pitti99},
+  volume = 5,
+  year = 1999
+}
+
+@unpublished{skos,
+  note = {\url{http://www.w3.org/2004/02/skos/}},
+  title = {SKOS Simple Knowledge Organization System Reference},
+  year = 2009,
+  author = {Alistair Miles and Sean Bechhofer},
+}
+
+@INPROCEEDINGS{Weinstein98ontology,
+    author = {Peter C. Weinstein},
+    title = {Ontology-Based Metadata: Transforming the MARC Legacy},
+    booktitle = {the Third International ACM Conference on Digital Libraries},
+    year = {1998},
+    pages = {254--263},
+    publisher = {ACM Press}
+}
+
+@unpublished{prov,
+  note = {\url{http://www.w3.org/TR/2013/NOTE-prov-primer-20130430/}},
+  title = {PROV Model Primer},
+  year = 2013,
+  author = {Yolanda Gil and Simon Miles},
+}
+
+@book{git,
+  title={Pro Git},
+  author={Chacon, Scott},
+  year={2009},
+  publisher={Apress}
+}
+
+@unpublished{oai,
+ title = {The Open Archives Initiative Protocol for Metadata Harvesting},
+ author = {Carl Lagoze and Herbert Van de Sompel and Michael Nelson and Simeon Warner},
+ year = 2008,
+ note = {\url{http://www.openarchives.org/OAI/openarchivesprotocol.html}}
+}
+
+@InProceedings{van2009ica,
+  title={The {ICA-AtoM} Project and Technology},
+  author={Van Garderen, Peter},
+  booktitle={Third Meeting on Archival Information Databases},
+  address = {Rio de Janeiro, Brazil},
+  pages={10},
+  year={2009},
+  note = {http://goo.gl/G8Fr9},
+
+}
+
+@TechReport{dbANDrdf,
+  author = 	 {Tim Berners-Lee},
+  title = 	 {Relational Databases on the Semantic Web},
+  institution =  {W3C},
+  year = 	 {1998},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  note =	 {\url{http://www.w3.org/DesignIssues/RDB-RDF.html}},
+  OPTannote = 	 {}
+}
+
+@inproceedings{yago,
+ author = {Fabian M. Suchanek and Gjergji Kasneci and Gerhard Weikum},
+ title = {{Yago: A Core of Semantic Knowledge}},
+ booktitle = {16th international World Wide Web conference (WWW 2007)},
+ year = {2007},
+ location = {Banff, Canada},
+ publisher = {ACM Press},
+ address = {New York, NY, USA}
+}
+
+@TechReport{sparql,
+  author = 	 {Kendall Grant Clark and Lee Feigenbaum and Elias Torres},
+  title = 	 {{SPARQL} Protocol for {RDF}},
+  institution =  {W3C},
+  year = 	 {2008},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTnumber = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  annote =	 {\url{http://www.w3.org/TR/rdf-sparql-protocol/}}
+}
+
+@book{wordnet,
+ editor = {Christiane Fellbaum},
+ year = {1998},
+ title = {{WordNet}: An Electronic Lexical Database},
+ address = {Cambridge, MA},
+ publisher = {MIT Press},
+}
+
+@inproceedings{wordnet-br,
+  author = {de Paiva, Valeria and Rademaker, Alexandre and de Melo, Gerard},
+  title = {OpenWordNet-PT: An Open Brazilian WordNet for Reasoning},
+  booktitle = {Proceedings of the 24th International Conference on Computational Linguistics},
+  year = {2012},
+  opteditor = {},
+  optvolume = {},
+  optnumber = {},
+  optseries = {},
+  optpages = {},
+  optmonth = {},
+  optaddress = {},
+  optorganization = {},
+  optpublisher = {},
+  url = {http://hdl.handle.net/10438/10274},
+  optnote = {See at \url{http://www.coling2012-iitb.org} (Demonstration
+                    Paper). Published also as Techreport
+                    \url{http://hdl.handle.net/10438/10274}},
+  optannote = {}
+}
+
+@inproceedings{sumo,
+  title={Towards a standard upper ontology},
+  author={Niles, Ian and Pease, Adam},
+  booktitle={Proceedings of the international conference on Formal Ontology in Information Systems-Volume 2001},
+  pages={2--9},
+  year={2001},
+  organization={ACM}
+}
+
+@article{babelnet,
+  author = {Roberto Navigli and Simone Paolo Ponzetto},
+ title =   {{B}abel{N}et: {T}he Automatic Construction, Evaluation and Application of a Wide-Coverage Multilingual Semantic Network},
+ journal = {Artificial Intelligence},
+ year =    {2012},
+ volume = {193},
+ pages = {217-250}
+}

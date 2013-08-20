@@ -1,0 +1,147 @@
+
+\section{Improving Semantics}
+
+More than improving the current structure for storing and accessing CPDOC data, we would like to exploit the semantic possibilities of such rich source of knowledge. One of the ways to do that is to embed knowledge from other sources or create new links within the available data. Since much of the data is related to people with historical relevance, or historical events, some specific ontologies and vocabularies can be used in this task. 
+
+The personal nature of the data allows us to use projects that are already well developed for describing relationships and bonds between people, such as FOAF (Friend of a Friend) - a vocabulary which uses RDF to describe relationships between people and other people or things. FOAF permits intelligent agents to make sense of the thousands of connections people have with each other, their belongings and historical positions during life. This improves accessbility and generates more knowledge from the available data.
+
+The analysis of structured data can also automatically extract connections and, ultimately, knowledge. A good example is the use of PROV, which provides a vocabulary to interchange provenance information. This is interesting to gather information of data that can be structurally hidden in tables or tuples. For instance [EXAMPLE].
+
+The RDF modelling enables also the merging of data content naturally. The DBpedia project, for instance, allows connections from different sources of data in order to create a big and linked knowledge database. DBpedia allows users to query relationships and properties associated with Wikipedia resources, including links to other related datasets. CPDOC can use the same strategy to link their data to already available sources and also make their own data available to a bigger audience.
+
+In the same direction, the use of lexical databases, such as the WordNet, applied to content sources can create automatically connections that improve dramatically the usability of a data source. BabelNet, for instance, links Wikipedia to WordNet. The result is an "encyclopedic dictionary" that provides concepts and named entities lexicalized in many languages and connected with large amounts of semantic relations. 
+
+Much of the effort proposed is related to integrating the data available to other sources of knowledge, improving both accessibility and usability of the data CPDOC holds. To do so, it is imperative to migrate the current structure to this modern one, aligned with semantic web directives. 
+
+\section{DHBB: study of case}
+
+The scope of the proposed implementation is limited, at first, to the
+entries of DHBB. The reason lies in the fact that the data model is
+the simplest of the three and also due to the unconditional support
+received by DHBB managers for our reformulation. We aim to implement a
+lightweight web interface prototype for browsing and querying CPDOC's
+collections; scripts to produce the RDF file for distribution of CPDOC
+archives releases; scripts to upload the CPDOC collections and files
+into the Dspace system; and a git repository for the DHBB files. All
+these steps are described in this section.
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=.9\textwidth]{diagrama1.png}
+  \caption{Data migration from relational databases to the proposed model}\label{fig:dia-1}
+\end{figure}
+
+Figure~\ref{fig:dia-1} illustrates the steps of the migration
+process from the relational database to the proposed model. In step (1) the relational database is exported to an RDF
+file using the open source D2RQ~\cite{d2rq} tool. The D2RQ mapping
+language~\cite{d2rq-map} allows the definition of a detailed mapping from the current
+relational model to a graph model and implements most of the ideas currently
+recommended by the W3C's R2RML mapping language~\cite{r2rml}.
+
+In step (2) scripts use the RDF file produced in the step
+(1) to migrate files and metadata of Acessus and PHO systems
+to the open source repository software DSpace. The mapping of
+Acessus data to Dspace is described in Table~\ref{tab:map}. The
+mapping of PHO interviews is basically consisted of linking each project to a collection and each interview to an item with the
+respectively bitstreams (digital audio or video files).
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rcl}
+Acessus &  & Dspace \\ \hline
+personal archives & $\to$ & communities \\
+series & $\to$ & collections \\
+documents or photographies metadata & $\to$ & items \\ 
+documents or photographies files & $\to$ & bitstreams \\ \hline
+\end{tabular}
+\caption{Mapping from Acessus to Dspace}\label{tab:map}
+\end{table}
+
+In step (3) the RDF model created is improved based on linked data
+concepts, i.e., considering the adoption of standard vocabularies
+and ontologies such as FOAF~\cite{foaf}, SKOS~\cite{skos}, Dublin
+Core~\cite{dc} and PROV~\cite{prov}. This refined RDF file would be available in form of periodic releases of CPDOC's collections that would be much more interoperable and useful for service providers.
+
+In step (4) Markdown~\cite{markdown} files are created using
+YAML~\cite{yaml} metadata header for each DHBB
+entry. YAML is a lightweight markup language for metadata
+description in a human-readable text file, while Markdown allows people to write text using an
+easy-to-read, easy-to-write plain text format that can be converted to
+structurally valid XHTML~\cite{xhtml} (for online use) or PDF (for
+printing). These files can be host in a distributed
+versioning control environment for collaborative maintenance. This can be achieved using Git~\cite{git}, a distributed version control system which is suitable for many different models of collaborations.
+
+% Some tools are available for this kind of conversion and one of the
+% most established is the D2RQ~\cite{d2rq}. Once the RDF is generated,
+% several steps for improving and enriching the RDF file, checking for
+% data consistency and gathering new data connections using the
+% available knowledge sources (ontologies, dictionaries etc) is
+% planned.  This environment of a group of files organized in a
+% directory structure under control of a version control system and
+% the RDF interface is meant to compose the new data storage for DHBB.
+
+Figure~\ref{fig:dhbb-ex} shows a fragment of a YAML+Mardown file from a
+DHBB entry, just as an example. Lines 1--16 are the YAML header with
+the metadata about the entry. The entry content is written in Markdown as observed
+from the line 17 on. In Line 18 it is possible to see that references to metadata fields
+can be made inside the body of the entry written in Markdown.
+
+\begin{figure}[thbp]
+  \centering
+\begin{lstlisting}[frame=single,numbers=left,basicstyle=\footnotesize\ttfamily]
+---
+type: biliography
+created-by: 2010-03-04T17:55:58,83Z
+title: Assad Junir, Mario
+reviewer: Fulano
+author: Beltrano
+positions: 
+ - dep. fed. MG 1998-1999
+ - dep. fed. MG 2000-2002
+ - dep. fed. MG 2003-2007
+sources: 
+ - Camara dos Deputados; DIAP (Ago./06); Diario de Sao Paulo
+   (online) 29/10/2003. at http://oglobo.globo.com/diariosp.
+ - Portal Caparao (online) 01/jun/2007 e 15/maio/2008. Disp.
+   em http://www.portalcaparao.com.br.
+---
+
+{{ title }}
+
+*Mario Assad Junior* nasceu em Manhuacu (MG) no dia 11 de 
+agosto de 1965, filho de [Mario Assad](/dhbb/mario-assad.html) 
+e de Nedi Vieira Assad. Seu pai foi deputado estadual em Minas 
+Gerais de 1967 a 1975 e de 1978 a 1983, secretario do Trabalho, 
+Acao Social  e Desporto de 1975 a 1978, deputado federal de 
+1983 a 1991, secretario de Justica de 1991 a 1994 e prefeito 
+de Manhuacu entre 2001 e 2004.
+...
+\end{lstlisting}
+\caption{YAML+Markdown file of a DHBB entry}\label{fig:dhbb-ex}
+\end{figure}
+
+Figure~\ref{fig:dia-2} shows how the CPDOC data is supposed to be maintained in our model. In
+step (1) a script is used to generate the current DHBB repositoty state RDF file for a DHBB maintainer. In step (2) the
+PHO and Acessus digital repository is queried and a RDF file is produced with a dump
+of its current state. The RDF files generated in steps (1) and (2) are combined
+into a single RDF file that is imported to a triple
+store. In (3) the combined RDF file with a snapshot of CPDOC data is made
+available for download or queries through a SPARQL Endpoint provided by
+the Triple Store. In (4) a Solr Instance Index is updated, serving as a 
+back-end to a lightweight web interface that provides faced search
+and browsing interfaces of an integrated view of CPDOC collections. As a modern web development framework, Solr can provide much better and fast queries support when compared to traditional relational database systems.
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=.9\textwidth]{diagrama2.png}
+  \caption{Data maintainance}\label{fig:dia-2}
+\end{figure}
+
+It is possible to notice that steps (1) and (2) of Figure~\ref{fig:dia-2} need not be
+synchronized, even though CPDOC teams could agree to follow a common data release schedule. For instance, if a specific release of CPDOC complete archives is planned but the DHBB team was not able deliver their version in time, the release can be delivered normally. It would contain the last versions delivered by each team, with no prejudice to the others.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "article_revA"
+%%% End: 

@@ -1,0 +1,91 @@
+
+\section{The problems}\label{sec:problems}
+
+In this section we summarize the main problems identified in CPDOC's
+current infrastructure and daily working environment.
+
+As described in Section~\ref{sec:cpdoc}, CPDOC's archives are
+maintained in three different information systems based on traditional
+relational data models. This infrastructure is hard to maintain,
+improve and refine. The information systems do not provide an
+intuitive and effective interfaces to their users, making the access
+to information difficult and limited.
+
+CPDOC collections visibility online are limited. CPDOC data is
+actually hide in what is called ``Deep
+Web''~\cite{bergman2001white}. The information cannot be found or
+access by standard search engines for mainly two reasons: (1) the page
+does not exist until being created dynamically as a result of an
+specific query; (2) the users are required to login in order to make
+queries or access the digital files. Service providers does not access
+directly the data and therefore cannot provide specialized services
+using it. Users themselves do not have complete control over queries
+to the collections, being limited to the interfaces offered by CPDOC.
+
+Concerning terminology, CPDOC collections do not follow any standard
+meta model, which hinders considerably the interoperability of their
+data with other digital collections and websites.
+
+Queries to CPDOC collections in general face idiosyncratic indexing
+problems and low rates of recall and precision. These problems are
+basically linked to the \emph{ad hoc} indexing strategy adopted
+earlier to define database tables and fields.
+
+The maintenance of 3 different information systems is expensive, time
+demanding and ineffective. Improvements are hard to implement and
+therefore innovative initiatives are usually postponed. We believe
+this is a side effect of the adoption of a relational data model and
+the traditional information systems maintenance methodology.
+% Regarding the items above, it is perhaps worth justifying in
+% technical detail the last one.
+In a relational database system, it is well known that it is expensive
+and hard to frenquently change the data model. This is due to the
+assumption that a relational data model must be defined \emph{a
+  priori}, i.e., before the beginning of data acquisition. Moreover,
+information systems for maintenance of relational databases are also
+difficult to evolve. Changes in the database require adaptations in
+the system interfaces and reports. This workflow is expensive, time
+consuming and demands several different professionals with different
+skills: interface developers, database administrators etc.
+
+The CPDOC researchers rely on the FGV's technical staff team from the
+IT departament for any database modification and user interface
+improvement. Even the addition of a new field in a table of the
+database requires a whole workflow comprising: (1) the specification
+of the requirement; (2) the costs and time estimation from the
+technical staff; (3) the expensive authorization; (4) the allocation
+of a technical profissional or team for a period of time considering
+the other FGV's priorities and demands. This workflow usually takes
+weeks and even months for simples changes or improvements.
+
+Whenever distributed and interoperable data maintenance is required,
+the relational data model fails severely. First, it is not easy to
+keep the model and data independent. Second, data exchange is hindered
+by then different storage strategies for datatypes and encodes of
+strings. Third, relational data models are commonly flooded with
+several auxiliary tables necessary to store non-trivial relations like
+N-N relations or generalizations. And finally, in general, few model
+constrains are maintained in databases, and the ones created are also
+not easily interoperable.
+
+% Concerning data storage, it is also worth mentioning that Acessus
+% and Oral Historic Interviews collections are not stored in a single
+% place. The actual files (digitalized documents) of personal archives
+% and the files of digitalized interviews are scattered in different
+% file servers.
+
+Concerning data storage, it is also worth mentioning that the
+digitalized Acessus's documents and the Oral History's interviews are
+not stored in a single place, but scattered in two different file
+servers. The CPDOC database only stores the metadata and paths in the
+file servers, which hinders the maintenance of consistency between
+files, metadata information and access control policies.
+
+Whereas people make great use of standard search engines to query and
+share knowledge, it becomes certainly one of the greatest challenges
+faced by CPDOC when it comes to open their collections.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "article_revA"
+%%% End: 
