@@ -1,13 +1,24 @@
 
-\section{The problems}\label{sec:problems}
+\section{Current Status}\label{sec:problems}
 
 In this section we summarize the main problems identified in CPDOC's
 current infrastructure and daily working environment.
 
 As described in Section~\ref{sec:cpdoc}, CPDOC's archives are
-maintained in three different information systems based on traditional
+maintained by three different information systems based on traditional
 relational data models. This infrastructure is hard to maintain,
-improve and refine. 
+improve and refine, and the information is not found or
+accessed by standard search engines for two reasons mainly: (1) an entry page
+does not exist until it is created dynamically by an
+specific query; (2) users are required to login in order to make
+queries or access the digital files. Service providers do not access 
+data directly and therefore cannot provide specialized services
+using it. Users themselves are not able to expand the queries
+over the collections, being limited to the available user interfaces in the website.
+Thereupon, data of CPDOC's collections  is
+currently limited to what is called ``Deep
+Web''~\cite{bergman2001white}.
+
 % The information systems do not provide an intuitive and effective
 % interfaces to their users, making the access to information difficult
 % and limited.
@@ -21,23 +32,19 @@ improve and refine.
 % especially if compared with the current available systems and
 % technologies for data storage, indexing and long-term preservation.
 
-The data of CPDOC's collections  is
-actually limited to what is called ``Deep
-Web''~\cite{bergman2001white}. The information cannot be found or
-access by standard search engines for mainly two reasons: (1) the page
-does not exist until being created dynamically as a result of an
-specific query; (2) the users are required to login in order to make
-queries or access the digital files. Service providers does not access
-the data directly and therefore cannot provide specialized services
-using it. Users themselves are not able to expand the queries
-over the collections, being limited to the avaiable interfaces in the website.
+The maintenance of current different information systems is very problematic. It is expensive, time
+demanding and ineffective. Improvements are hard to implement and
+therefore innovative initiatives are usually postponed. A relational database system is not easily modified,
+because relational data models must be defined \emph{a
+  priori}, i.e., before the data acquisition's stage. Moreover,
+changes in the database usually require changes in system interfaces and reports. The whole workflow is expensive, time
+consuming and demands different professionals with different
+skills from interface developers to database administrators.
 
 Concerning terminology, CPDOC's collections do not follow any metadata
-standards, which hinder considerably the interoperability with other
-digital sources.
-
-Queries in general face idiosyncratic indexing
-problems and low rates of recall and precision. These problems are
+standards, which hinders considerably the interoperability with other
+digital sources. Besides, the available queries usually face idiosyncratic indexing
+problems with low rates of recall and precision. These problems are
 basically linked to the \emph{ad hoc} indexing strategy adopted
 earlier to define database tables and fields.
 
@@ -59,20 +66,6 @@ earlier to define database tables and fields.
 % reports. This workflow is expensive, time consuming and demands
 % several different professionals with different skills: interface
 % developers, database administrators etc.
-
-The maintenance of 3 different information systems is expensive, time
-demanding and ineffective. Improvements are hard to implement and
-therefore innovative initiatives are usually postponed.
-% Regarding the items above, it is perhaps worth justifying in
-% technical detail the last one.
-The truth is that in a relational database system, it is not easy to
-freely change the data model, due to the
-fact that a relational data model must be defined \emph{a
-  priori}, i.e., before the  data acquisition's stage. Moreover,
-changes in the database require adaptations in
-the system interfaces and reports. The workflow is expensive, time
-consuming and demands several different professionals with different
-skills: interface developers, database administrators etc.
 
 % The CPDOC researchers rely on the FGV's technical staff team from
 % the IT department for any database modification or user interface
@@ -100,11 +93,10 @@ skills: interface developers, database administrators etc.
 % and the files of digitalized interviews are scattered in different
 % file servers.
 
-Concerning data storage, it is also worth mentioning that the
-digitalized Acessus's documents and the Oral History's interviews are
-not stored in a single place, but scattered in two different file
-servers. The CPDOC database only stores the metadata and paths in the
-file servers, which hinders the maintenance of consistency between
+Finally, data storage is also an issue. Digitized Acessus's documents and Oral History's interviews are
+not stored in a single place, but scattered in different file
+servers. The CPDOC database only stores the metadata and file paths to the
+file servers, making it very difficult to ensure consistency between
 files, metadata information and access control policies.
 
 % Whereas people make great use of standard search engines to query

@@ -7,12 +7,12 @@ replaced by the concept of open source systems. In such systems the
 responsibility of updating and creating new features is not sustained
 by a single institution but usually by a whole community that share
 knowledge and interests with associates. In this way the system is
-kept up-to-date, accessible and growing much faster due to the
+kept up-to-date, accessible and improving much faster due to the
 increased number of contributors. Such systems are usually compatible
-with standards in a way to garantee their widely adoption.
+with standards so as to ensure they can be widely used.
 
-In this context we suggest that CPDOC improves the way their rich
-historical data is maintained, stored and shared. Our proposal
+Our objective is to propose the use of modern tools so CPDOC can improve the way
+they maintain, store and share their rich historical data. The proposal
 privileges open source systems and a lightweight, shared way of
 dealing with data. Concretely, we propose the substitution of the
 three CPDOC systems by the following technologies.
@@ -24,46 +24,49 @@ three CPDOC systems by the following technologies.
 % different administrative reasons, but also because it has the
 % simplest data model.
 
-The Acessus and PHO systems data and files would be stored in an open
-source institutional repository software such as
-Dspace~\footnote{\url{http://www.dspace.org/}}, Fedora Commons
-Framework~\footnote{\url{http://www.fedora-commons.org}} or a more
-specialized repository management system like
-ICA-AtoM~\cite{van2009ica}~\footnote{\url{https://www.ica-atom.org}}. In
-this article we assume the adoption of Dspace with no prejudice of
-theoretical modelling. The Acessus data model comprises personal
+The Acessus data model comprises personal
 archives that contains one or more series (which can contain also
 other series in a stratified hierarchy) of digitalized documents or
-photographies. The PHO system data model is basically a set of
+photos. The PHO system data model is basically a set of
 interviews grouped according to some defined criteria within the
 context given by funded projects. For instance, a political event
 could originate a project which involve interviewing many important
 people taking part on the event.
 
+Therefore, Acessus and PHO systems can be basically understood as systems
+responsible for maintaining collections of documents organized in a
+hierarchical structure. In this way, one can assume that any digital
+repository management system (DRMS) have all the required
+functionalities. Besides, DRMS usually have desirable features that are not
+present in Acessus or PHO, such as: (1) data model based on standard
+vocabularies like Dublin Core~\cite{dc} and SKOS~\cite{skos}; (2)
+long-term data preservation functionalities (tracking and
+notifications of changes in files); (3) fine-grained access control
+policies; (4) flexible user interface for basic and advanced queries;
+(5) compliance with standard protocols for repositories
+synchronization and interoperability (e.g., OAI-PMH~\cite{oai}); (6)
+import and export functionalities using standard file formats and
+protocols; and more.
+
+In our proposal Acessus and PHO systems data and files are planned to be stored in an open
+source institutional repository software such as
+Dspace~\footnote{\url{http://www.dspace.org/}} or Fedora Commons
+Framework~\footnote{\url{http://www.fedora-commons.org}}.
+% or a more
+%specialized repository management system like
+%ICA-AtoM~\cite{van2009ica}~\footnote{\url{https://www.ica-atom.org}}. 
+In this article we assume the adoption of Dspace with no prejudice of
+theoretical modeling. 
+
 % These projects are the motivation and origin of financial support
 % for a series of interviews conducted by CPDOC team with a specific
 % purpose.
 
-It is possible to consider that Acessus and PHO systems are basically
-responsible for maintaining collections of documents organized in a
-hierarchical structure. In this way, one can assume that any digital
-repository management system (DRMS) have all required
-functionalities. Besides that, DRMS share features desired but not
-present in Acessus or PHO, such as: (1) data model based on standard
-vocabularies like Dublin Core~\cite{dc} and SKOS~\cite{skos}; (2)
-long-term data preservation functionalities (tracking and
-notifications of chances in files); (3) fine-grained access control
-policies; (4) flexible user interface for basic and advanced queries;
-(5) compliance with standard protocols for repositories
-synchronization and interoperability (e.g., OAI-PMH~\cite{oai}); (6)
-import and export functionalities throuth standard file formats and
-protocols; and more.
-
-When it comes to the DHBB system, its relational model is a couple of
+The DHBB relational model can be summarized to a couple of
 tables that store metadata about the dictionary entries (stored in a
-single text field of a table). The actual dictionary entries are
+single text field of a given table). The actual dictionary entries are
 created and edited in text editors outside the system and imported to
-the system after the whole process of creation and revision. 
+it only after being created and revised. 
 
 % In this way, the system does not maintain the history of
 % changes. The content of the entries are saved in HTML~\cite{xhtml}
@@ -71,32 +74,32 @@ the system after the whole process of creation and revision.
 % making it not uniform, clean or portable and long-term compatible.
 
 The nature of its data suggests that DHBB entries could be easily
-maintained as text files using a lightweight human-readble markup
-syntax. The files would be organized in a intuitive directory
+maintained as text files using a lightweight human-readable markup
+syntax. The files would be organized in an intuitive directory
 structure and kept under version control for coordinated and
 distributed maintenance. The use of text
-files~\footnote{\url{http://en.wikipedia.org/wiki/Text_file}} have a
-couple of reasons. They are: easy to maintain using any text editor
-(tool independent) allowing the user to choose the best editor for
-him; conform to long-term standards by being software and plataform
+files~\footnote{\url{http://en.wikipedia.org/wiki/Text_file}} is justified
+by a couple of reasons. They are: easy to maintain using any text editor
+(tool independent) allowing the user to use the prefered text editor; 
+conform to long-term standards by being software and platform
 independent; easy to be kept under version control by any modern
 version control
 system~\footnote{\url{https://en.wikipedia.org/wiki/Revision_control}.}
-since they are comparable (line by line) and efficient at storing
+since they are comparable (line by line); and efficient to store
 information~\footnote{A text file of a DHBB entry has usually 20\% the
-  size of a file DOCX (Microsoft Word) of the same entry.}.
+size of a file DOCX (Microsoft Word) for the same entry.}.
 
-It is interesting to notice that the adoption of a version control
-system will allow all file exchanges be recorded and the whole process
-be controlled without any need of sophisticated workflow systems,
-following the methodology developed by open sources communities for
-open source softwares maintenance. For instance,
-Git~\footnote{\url{http://git-scm.com}.} is specially developed to
-ensure data consistency and keeping track of chances, authorship and
-provenance. The use of a version control system will improve the
+The use of a version control system will improve the
 current workflow of DHBB reviewers and coordinators, since presently
 there is no aid system for this task, basically performed using
-Microsoft Word text files and emails.
+Microsoft Word text files and emails. The adoption of such tool
+will allow file exchanges to be recorded and the process controlled 
+without the need of sophisticated workflow systems,
+following the methodology developed by open sources communities for
+open source software maintenance. For instance,
+Git~\footnote{\url{http://git-scm.com}.} is specially suited to
+ensure data consistency and keeps track of changes, authorship and
+provenance. 
 
 % Most of the suggested technologies are of daily use to most people
 % with technical profile, such as software developers, but not very
@@ -106,9 +109,9 @@ Microsoft Word text files and emails.
 % time to learn new technologies, instead of keeping their inefficient
 % but known way of dealing with data.
 
-This proposal ideas are already implemented partially for evaluation
-purpose only. Figure~\ref{fig:dia-1} illustrates the necessary steps
-to full implement our proposal. In the next pagraphs we will briefly
+Many of the ideas here proposed were already implemented as a proof of concept
+to evaluate the viability of such environment in CPDOC. Figure~\ref{fig:dia-1} illustrates the necessary steps
+to fully implement our proposal. In the following text we briefly
 describe each step.
 
 \begin{figure}[htbp]
@@ -117,7 +120,7 @@ describe each step.
   \caption{Migrating from relational databases to the proposed model}\label{fig:dia-1}
 \end{figure}
 
-In step (1) the relational database was exported to
+Step (1) is implemented and the relational database was exported to
 RDF~\cite{rdf-primer} using the open source D2RQ~\cite{d2rq} tool. The
 D2RQ mapping language~\cite{d2rq-map} allows the definition of a
 detailed mapping from the current relational model to a graph model
@@ -130,27 +133,26 @@ defers any model improvement to step (2) described below.
 % technologies and for the abandonment of the current architecture,
 % the generated RDF can be updated whenever necessary using D2RQ.
 
-In step (2) we will create a refinement of the graph data model
-produced in step (1). The ideia of the refinement is to produce a data
+Step (2) is planned and represents a refinement of the graph data model
+produced in step (1). The idea is to produce a data
 model based on standard vocabularies like Dublin Core~\cite{dc},
 SKOS~\cite{skos}, PROV~\cite{prov} and FOAF~\cite{foaf}. The use of
-standard vocabularies will make it interchangeable with other models
-and facilitate its adoption by service provides and users. In
-Section~\ref{sec:model} we describe in more detail the idea of this
-refinement. Moreover, this step will also help to better understand
-all database model and its semantics.
+standard vocabularies will make the data interchangeable with other models
+and facilitate its adoption by service provides and users. It will also help us to better understand
+the database model and its semantics. In
+Section~\ref{sec:model} we describe the refinement proposal in detail. 
 
-In step (3) a text file is produced for each DHBB entry. Each text
-file holds the entry text and metadata.~\footnote{It is out of the
-  scope of this article to present the final format of these files.}
+Step (3) is already implemented and deploys a text file for each DHBB entry. Each text
+file holds the entry text and metadata~\footnote{It is out of this article
+scope to present the final format of these files.}.
 The files use YAML~\cite{yaml} and Markdown~\cite{markdown} markup
-languages to describe the metadata and entry content. We choose to
-adopt YAML and Markdown because both languages are human-readable
+languages to describe the metadata and entry content. YAML and Markdown were adopted 
+mainly because both languages are human-readable
 markups for text files and are supported by almost all static site
 generators~\footnote{In this application we used Jekyll,
   \url{http://jekyllrb.com}, but any other static site generator could
-  be used.}. The use of a static site generator gives to the DHBB
-maintainers complete control over the deployment of a DHBB browsable
+  be used.}. The use of a static site generator allows DHBB
+maintainers to have full control over the deployment of a DHBB browsable
 version.
 
 % Using some scripts that we can easly develop they could deploy a
@@ -164,16 +166,16 @@ version.
 % Actually, each DHBB contributor could generate his one browsable
 % DHBB for navigate through the DHBB entries.
 
-Finally, note that step (3) was actally implemented to use the initial
-version of the RDF produced in step (1). In the future, the code could
-be easly adapted to use the final RDF model produced by step (2).
+Note that step (3) was actually implemented to use the initial
+version of the RDF produced in step (1). The code can be easily
+adapted to use the final RDF model produced by step (2).
 
-In step (4) the digital files and their metadata will be imported into
-the DRMS. This step will be much easier to be done using the RDF
-produced in step (2) than having to access the original database. For
-complete this step we only have to decide about the repository
-management system that will be adopted, install it in a server and
-create the necessary scripts.
+In the planned step (4) the digital files and their metadata will be imported into
+a DRMS. This step is much more easily implemented using the RDF
+produced in step (2) than having to access the original database. It is only necessary
+to decide which repository management system will be adopted.
+%, install it in a server and
+%create the necessary scripts.
 
 % Considering that all DRMS have detailed control access mecanisms, we
 % believe that both high and low resolution files can be imported to
@@ -188,24 +190,24 @@ create the necessary scripts.
 % and query support was provided by Apache Solr~\cite{solr} was built
 % and used.
 
-The proposed architecture is presented in Figure~\ref{fig:dia-2} and
-will be described briefly in what follows. Remember that one of our
-main goals is to make the CPDOC archive collections available as open
-linked data. Usually, this is accomplished by providing the data in as
+The proposed workflow architecture is presented in Figure~\ref{fig:dia-2}.
+%and will be described briefly in what follows. Remember that 
+Recall that one of the main goals is to make CPDOC archive collections available as open
+linked data. This can be accomplished by providing data as
 RDF/OWL files for download and a SPARQL Endpoint~\cite{sparql} for
-queries. Since data and evolve constantly, CPDOC teams would have the
-agree on a periodical releases of the data. Besides the RDF/OWL files
+queries. Since data evolve constantly, CPDOC teams would deliver 
+periodical data releases. Besides the RDF/OWL files
 and the SPARQL Endpoint, we believe that it is also important to
-provide a lightweight and flexible web interface for end users browse
-and query the data. This can be easily done using a static website
+provide a lightweight and flexible web interface for final users to browse
+and query data. This can be easily done using a static website
 generator and Apache
 Solr~\footnote{\url{http://lucene.apache.org/solr/}} for advanced
-queries. Note that the produced website, the RDF/OWL files and SPARQL
-Endpoints are complementaries outputs and potencially serve to
-different purpose and users. As a modern index solution, Solr can
+queries. As a modern index solution, Solr can
 provide much powerful and fast queries support when compared to
-traditional relational database systems. This sum up the ideas of the
-architecture.
+traditional relational database systems. Note that the produced website, the RDF/OWL files and SPARQL
+Endpoints are complementary outputs and serve to
+different purpose and users. 
+%This sum up the ideas of the architecture.
 
 \begin{figure}[htbp]
   \centering
@@ -220,10 +222,10 @@ information systems. This means that any data modification or
 insertion is available in real time for CPDOC website users. However,
 this architecture has a lot of drawbacks as mentioned in
 Section~\ref{sec:problems}, and also the nature of CPDOC data does not
-require continous updates, which means that the cost of this
+require continuous updates, which means that the cost of this
 synchronous \emph{modus operandi} is not needed. Usually, CPDOC teams
-work on projects basis and new collections, documents and metadata
-revisions are not released so often.
+work on projects basis and therefore new collections, documents and metadata
+revisions are not very often released.
 
 % \section{DHBB: study of case}
 
@@ -275,9 +277,8 @@ revisions are not released so often.
 % release can be delivered normally. It would contain the last
 % versions delivered by each team, with no prejudice to the others.
 
-The result obtained so far encouraged us to proposed a complete data
-model aligned with open linked data vocabularies. In the next section
-we will present an outline of how we suggest to do such map.
+The results obtained so far encouraged us to propose a complete data
+model aligned with open linked data vocabularies, presented in detail in next section.
 
 % FICOU MUITO FORA DE CONTEXTO To make CPDOC data widely used and
 % available, we also suggest that CPDOC should define a annual

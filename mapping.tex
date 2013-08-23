@@ -15,7 +15,7 @@ people, such as FOAF~\cite{foaf} (Friend of a Friend) -- a vocabulary
 which uses RDF to describe relationships between people and other
 people or things. FOAF permits intelligent agents to make sense of the
 thousands of connections people have with each other, their belongings
-and historical positions during life. This improves accessbility and
+and historical positions during life. This improves accessibility and
 generates more knowledge from the available data.
 
 The analysis of structured data can automatically extract connections
@@ -29,22 +29,24 @@ The RDF graph model enables also the merging of data content
 naturally. The DBpedia project, for instance, allows users to query
 relationships and properties associated with Wikipedia resources, and
 users can link other datasets to the DBpedia dataset in order to
-create a big and linked knowledge knowledge base.
+create a big and linked knowledge knowledge base. CPDOC could
+link their data to DBpedia and then make their own data available for a 
+bigger audience.
 % The DBpedia project, for instance, provide URIs~\footnote{Uniform
 % resource identifier,
 % \url{https://en.wikipedia.org/wiki/Uniform_resource_identifier}.}
 % which enable the connection of these resources with different
 % sources of data in order to create a big and linked knowledge
 % database.
-CPDOC can use DBpedia to link their data to already available
-resources in DBpedia making their own data available to a bigger
-audience.
+%CPDOC can use DBpedia to link their data to already available
+%resources in DBpedia making their own data available to a bigger
+%audience.
 
-In the same direction, we aim to use of lexical databases, such as the
+In the same direction, the use of lexical databases, such as the
 WordNet~\cite{wordnet} and its Brazilian version
-OpenWordnet-PT~\cite{wordnet-br}, to make natural language processing
-of DHBB entries. For instance, named entities recognizition and other
-NLP tasks can create automatically connections that improve
+OpenWordnet-PT~\cite{wordnet-br}, will allow us to make natural language processing
+of DHBB entries. Named entities recognition and other
+NLP tasks can automatically create connections that improve
 dramatically the usability of the content.
 % The Brazilian OpenWordnet-PT provides a lexical resource for
 % Portuguese complete mapped to the original english WordNet.
@@ -101,32 +103,31 @@ entries.
 
 
 Figure~\ref{fig:pho} shows a fragment of the current RDF model
-produced by D2RQ, in step (1) of Figure~\ref{fig:dia-1}, using the
-original CPDOC database relational model. This fragment exposes only
-the PHO classes (derived from the tables) and some properties (derived
-from the foreign keys). Classes are written inside the boxes and the
-names in arrows that connect the boxes are the properties that connect
-instances of the classes.
+produced by D2RQ (in step (1) of Figure~\ref{fig:dia-1}) using the
+original CPDOC database relational model. This fragment shows only
+some PHO classes (derived from the tables) and some properties (derived
+from the foreign keys). Classes are written inside the boxes and properties are
+represented by the names in arrows that connect boxes.
 
-In the model presented in Figure~\ref{fig:pho} it is possible to see
-that D2RQ was not able to automaticly improve much further the
+The model presented in Figure~\ref{fig:pho} depicts
+that D2RQ was not able to automatically improve much further the
 model. D2RQ was able to correctly translate relations N:M in the
 relational model, such as \texttt{entrevista\_entrevistador}
 (originally a table in the relational model) to a property that
-connect directly instances of \texttt{entrevista} (Interview) with
-instances of \texttt{entrevistador} (Interviewer). Nevertheless, the
+connect directly instances of \texttt{entrevista} (interview) with
+instances of \texttt{entrevistador} (interviewer). Nevertheless, the
 N:M relation between \texttt{entrevista} and \texttt{tecnico}
-(technician) was kept as a a intermediary class called
-\texttt{tecnico\_entrevista} because of the existence of an aditional
+(technician) was kept as an intermediary class called
+\texttt{tecnico\_entrevista} due to the existence of an aditional
 information in this N:M relation, the role (\texttt{funcao} class) of
-the technician in the interview. The relational model also seems to
+the interview technician. The relational model also seems to
 have some inconsistences. Although the connection of technician and
 interview is parameterized by different roles, the donator,
-interviewer and interviewed of an interview are modelled each one in a
+interviewer and interviewed of an interview are modeled each one in a
 specific table. In this case interviewed, interviewer, donator and
 technician are all people that share a lot of common properties like
 name, address, etc, and could be modeled as people. These problems are
-all result of a ``ad hoc'' modeling process. The model, as is, only
+all result of a ``ad hoc'' modeling process. The model defined this way only
 makes sense for CPDDOC team and it could hardly be useful outside
 CPDOC.
 
@@ -136,17 +137,17 @@ CPDOC.
   \caption{PHO revised RDF model}\label{fig:pho-new}
 \end{figure}
 
-Figure~\ref{fig:pho-new} shows how PHO model will be refined. The new
+Figure~\ref{fig:pho-new} shows how PHO model can be refined. The new
 model uses standard vocabularies and ontologies, making the whole
 model much more understandable and interoperable. In the
-Figure~\ref{fig:pho-new}, \texttt{prov:Activity} was duplicated just
-to better presentation. The prefixes in the names indicate the
+Figure~\ref{fig:pho-new}, \texttt{prov:Activity} was duplicated only
+for a better representation. The prefixes in the names indicate the
 vocabularies and ontologies used: \texttt{prov}, \texttt{skos},
 \texttt{dcterms}, \texttt{dc}, \texttt{geo}, and \texttt{bio}. We also
-developed a CPDOC ontology that declares its own classes and specify
-ontologies links like the one that says that an \texttt{foaf:Agent} is
-a \texttt{prov:Agent}. Some classes will be subclasses of standard
-classes (e.g. \texttt{Interview}), some will be replaced by standard
+defined a CPDOC ontology that declares its own classes and specific
+ontology links, such as the one that states that a \texttt{foaf:Agent} is
+a \texttt{prov:Agent}. In this model, we see that some classes can be subclasses of standard
+classes (e.g. \texttt{Interview}), while some classes can be replaced by standard
 classes (e.g. \texttt{LOCALIDADE}). 
 
 %%% Local Variables: 
